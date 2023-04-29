@@ -1,0 +1,47 @@
+{
+  "name": "gym-halpert-server",
+  "version": "1.0.0",
+  "main": "server.ts",
+  "license": "MIT",
+  "author": {
+    "name": "Chan Wei Qi",
+    "email": "chanweiqi27@gmail.com",
+    "url": "https://github.com/cweiqi27"
+  },
+  "dependencies": {
+    "@clerk/clerk-sdk-node": "^4.8.2",
+    "@types/node": "^18.15.10",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.0.1",
+    "express": "^4.18.2",
+    "global": "^4.4.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7",
+    "svix": "^0.83.1",
+    "zod": "^3.21.4"
+  },
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "dev": "nodemon src/server.ts",
+    "generate": "ts-node src/scripts/generate.ts",
+    "delete": "ts-node src/scripts/delete.ts"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.2",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "date-fns": "^2.29.3",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "mongoose": "^7.0.3",
+    "pino": "^8.11.0",
+    "pino-pretty": "^10.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  }
+}
