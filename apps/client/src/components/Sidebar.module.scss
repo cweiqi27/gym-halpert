@@ -27,21 +27,14 @@
   }
 }
 
-.linkBtn {
-  &,
-  &Active,
-  &Pending {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: $text-lg;
-    font-weight: $font-bold;
-  }
-  color: $color-stroke;
-  &:hover {
-    color: lighten($color-stroke, 15);
-  }
+.linkBtn,
+.linkBtnActive {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: $text-lg;
+  font-weight: $font-bold;
   &Active {
-    color: $color-highlight;
+    color: aqua;
   }
 }
