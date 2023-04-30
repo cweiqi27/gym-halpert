@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/Root";
 import "./styles/globals.scss";
+import Workout from "./routes/Workout";
+import History from "./routes/History";
 
 const router = createBrowserRouter([
   {
@@ -11,7 +13,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "workout",
-        element: <Root />,
+        element: <Workout />,
+      },
+      {
+        path: "history",
+        element: <History />,
       },
     ],
   },

@@ -1,11 +1,14 @@
+import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
+import styles from "./Root.module.scss";
 
-type Props = {};
-
-const Root = (props: Props) => {
+const Root = () => {
   return (
     <>
       <Sidebar />
+      <main className={styles.container}>
+        <Outlet />
+      </main>
     </>
   );
 };
