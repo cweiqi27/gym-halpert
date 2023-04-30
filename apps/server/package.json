@@ -1,5 +1,5 @@
 {
-  "name": "gym-halpert-server",
+  "name": "server",
   "version": "1.0.0",
   "main": "server.ts",
   "license": "MIT",
@@ -24,7 +24,8 @@
     "start": "ts-node src/server.ts",
     "dev": "nodemon src/server.ts",
     "generate": "ts-node src/scripts/generate.ts",
-    "delete": "ts-node src/scripts/delete.ts"
+    "delete": "ts-node src/scripts/delete.ts",
+    "lint": "eslint"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.2",
