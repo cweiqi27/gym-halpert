@@ -1,0 +1,10 @@
+@use "../styles/abstracts/" as *;
+
+.logo {
+  color: $color-stroke;
+  font-size: $text-2xl;
+  font-weight: $font-bold;
+  &:hover {
+    color: lighten($color-stroke, 15);
+  }
+}

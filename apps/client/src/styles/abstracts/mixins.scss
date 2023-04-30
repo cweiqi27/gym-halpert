@@ -1,5 +1,6 @@
 @use "colors" as colors;
 @use "typography" as typography;
+@use "breakpoints" as breakpoints;
 
 // Page Titles
 @mixin title {
@@ -85,5 +86,29 @@
       transform: translateY(0);
       animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
+  }
+}
+
+@mixin sm {
+  @media only screen and (min-width: breakpoints.$screen-sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (min-width: breakpoints.$screen-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (min-width: breakpoints.$screen-lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media only screen and (min-width: breakpoints.$screen-xl) {
+    @content;
   }
 }

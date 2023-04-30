@@ -1,0 +1,40 @@
+@use "../styles/abstracts/" as *;
+
+.container {
+  display: none;
+  @include sm {
+    z-index: 40;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 13rem;
+    height: 100vh;
+    border-right: 0.25rem solid $color-stroke;
+    background-color: $color-submain;
+  }
+}
+
+.inner {
+  height: 100%;
+  padding: 0.5rem;
+  overflow-y: auto;
+  & ul {
+    margin-top: 1rem;
+  }
+  & ul > * + * {
+    margin-top: 0.5rem;
+  }
+}
+
+.linkBtn,
+.linkBtnActive {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: $text-lg;
+  font-weight: $font-bold;
+  &Active {
+    color: aqua;
+  }
+}
