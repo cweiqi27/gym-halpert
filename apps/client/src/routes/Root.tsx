@@ -1,7 +1,13 @@
+import Sidebar from "../components/Sidebar";
+
 type Props = {};
 
-const root = (props: Props) => {
-  return <div>root</div>;
+const Root = (props: Props) => {
+  return (
+    <>
+      <Sidebar />
+    </>
+  );
 };
 
-export default root;
+export default Root;
