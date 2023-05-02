@@ -12,14 +12,12 @@
 
 // Buttons
 @mixin button-solid {
-  border-radius: 0.5rem;
   border: 3px solid;
   border-bottom-width: 6px;
   padding: 0.5rem 1rem;
 }
 
 @mixin button-shadow {
-  border-radius: 0.5rem;
   border-bottom: 6px solid;
   padding: 0.5rem 1rem;
 }
