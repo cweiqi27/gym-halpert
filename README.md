@@ -19,7 +19,7 @@
   <p align="center">
     Bro! Don&apos;t mindlessly pump your guns without tracking your progress!
     <br /> 
-     Be the smartest gym rat alive with Gym Halpert.
+     Let Gym Halpert help you be the smartest gym rat alive.
     <br />
     <a href="https://github.com/cweiqi27/gym-halpert"><strong>Explore the docs »</strong></a>
     <br />
