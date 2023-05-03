@@ -1,7 +1,8 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
-import LogoLink from "./LogoLink";
 import styles from "./Sidebar.module.scss";
 import { IconBarbell, IconHistory } from "@tabler/icons-react";
+import LogoLink from "../../components/LogoLink";
 
 const Sidebar = () => {
   return (

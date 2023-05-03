@@ -1,0 +1,15 @@
+@use "../../styles/abstracts/" as *;
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 0.15rem;
+  border-radius: 1rem;
+  @include button-solid;
+  border-color: $color-stroke;
+  padding: 0.5rem 1rem;
+  background-color: $color-submain;
+  cursor: pointer;
+}
