@@ -1,6 +1,7 @@
-import Root from "./pages/Root";
-import Workout from "./pages/Workout";
-import History from "./pages/History";
+import ErrorPage from "./error-page";
+import Root from "./routes/Root";
+import Workout from "./routes/Workout";
+import History from "./routes/History";
 
 const routesConfig = [
   {
@@ -16,6 +17,7 @@ const routesConfig = [
         element: <History />,
       },
     ],
+    errorElement: <ErrorPage />,
   },
 ];
 

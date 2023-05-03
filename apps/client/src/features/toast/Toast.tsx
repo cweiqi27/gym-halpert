@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Toast.module.scss";
-import { useAppDispatch, useAppSelector } from "../../hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { increment } from "./toastSlice";
 
 type Props = {};
