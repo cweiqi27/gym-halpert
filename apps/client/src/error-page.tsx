@@ -1,9 +1,7 @@
 import React from "react";
 
-type Props = {};
-
-const errorPage = (props: Props) => {
+const ErrorPage = () => {
   return <div>Error!</div>;
 };
 
-export default errorPage;
+export default ErrorPage;

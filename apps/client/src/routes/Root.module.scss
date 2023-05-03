@@ -1,0 +1,7 @@
+@use "../styles/abstracts/" as *;
+
+.container {
+  @include sm {
+    margin-left: 13rem;
+  }
+}

@@ -1,24 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/Root";
 import "./styles/globals.scss";
+import routesConfig from "./routesConfig";
+import store from "./app/store";
+import { Provider } from "react-redux";
+import { ClerkProvider } from "@clerk/clerk-react";
+import { env } from "./env";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    children: [
-      {
-        path: "workout",
-        element: <Root />,
-      },
-    ],
-  },
-]);
+const clerkPubKey = env.VITE_CLERK_PUBLISHABLE_KEY;
+const router = createBrowserRouter(routesConfig);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ClerkProvider publishableKey={clerkPubKey}>
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
+    </ClerkProvider>
   </React.StrictMode>
 );

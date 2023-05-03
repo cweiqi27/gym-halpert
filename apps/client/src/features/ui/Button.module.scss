@@ -1,0 +1,34 @@
+@use "../../styles/abstracts/" as *;
+
+.button {
+  &Primary,
+  &Secondary,
+  &Tertiary {
+    border-radius: 1rem;
+    @include button-solid;
+    border-color: $color-stroke;
+    padding: 0.5rem 1rem;
+    font-size: $text-sm;
+    font-weight: $font-medium;
+    cursor: pointer;
+  }
+  &Primary {
+    background-color: $color-highlight;
+    &:hover {
+      background-color: darken($color-highlight, 5);
+    }
+  }
+  &Secondary {
+    background-color: $color-secondary;
+  }
+  &Tertiary {
+    background-color: $color-tertiary;
+  }
+}
+
+.title,
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

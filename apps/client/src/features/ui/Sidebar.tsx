@@ -1,7 +1,8 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
-import LogoLink from "./LogoLink";
 import styles from "./Sidebar.module.scss";
 import { IconBarbell, IconHistory } from "@tabler/icons-react";
+import LogoLink from "./LogoLink";
 
 const Sidebar = () => {
   return (
@@ -18,6 +19,17 @@ const Sidebar = () => {
             >
               <IconBarbell />
               Workout
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="history"
+              className={({ isActive, isPending }) =>
+                isActive ? styles.linkBtnActive : styles.linkBtn
+              }
+            >
+              <IconHistory />
+              History
             </NavLink>
           </li>
           <li>
