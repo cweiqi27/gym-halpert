@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nx": "^16.0.1",
+    "turbo": "^1.9.3",
     "typescript": "^5.0.4"
   }
 }
