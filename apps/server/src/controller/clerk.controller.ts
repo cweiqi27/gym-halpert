@@ -7,7 +7,7 @@ import type {
   WebhookMessage,
 } from "../types/clerk.types";
 
-export const clerkSyncWebhookHandler = async (req: Request, res: Response) => {
+export const syncWebhookHandler = async (req: Request, res: Response) => {
   const payload = JSON.stringify(req.body);
   const headers = req.headers as IncomingCustomHeaders;
 

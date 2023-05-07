@@ -9,9 +9,12 @@ export const createExerciseSchema = z.object({
     image: z.string().optional(),
     bodyParts: z.array(z.string()),
     equipment: z.string().optional(),
-    difficulty: z.number({
-      required_error: "Exercise difficulty is required.",
-    }),
+    difficulty: z
+      .number({
+        required_error: "Exercise difficulty is required.",
+      })
+      .min(1)
+      .max(10),
   }),
 });
 

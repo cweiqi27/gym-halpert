@@ -17,6 +17,6 @@ const bodyPartSchema = new Schema<BodyPartDocument>({
   updatedAt: { type: Date, default: Date.now() },
 });
 
-const BodyPart = model("BodyPart", bodyPartSchema);
+const BodyPart = model<BodyPartDocument>("BodyPart", bodyPartSchema);
 
 export default BodyPart;
