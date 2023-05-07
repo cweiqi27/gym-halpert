@@ -9,6 +9,7 @@ const serverSchema = z
     PORT: z.string(),
     CLERK_SECRET_KEY: z.string(),
     CLERK_SYNC_WEBHOOK_SIGNING_SECRET: z.string(),
+    ADMIN_ID: z.string(),
   })
   .safeParse(process.env);
 

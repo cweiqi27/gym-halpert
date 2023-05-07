@@ -1,6 +1,6 @@
 import express from "express";
 import { connectDb } from "./utils/connect";
-import routes from "./routes/app";
+import routes from "./routes/app.routes";
 import { env } from "./schema/env.schema";
 import logger from "./utils/logger";
 
