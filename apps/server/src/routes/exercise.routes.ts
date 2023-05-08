@@ -6,7 +6,7 @@ import { createExerciseHandler } from "../controller/exercise.controller";
 export const exerciseRoutes = (app: Express) => {
   // create exercise
   app.post(
-    "/api/exercises",
+    "/api/v1/exercises",
     validateResource(createExerciseSchema),
     createExerciseHandler
   );

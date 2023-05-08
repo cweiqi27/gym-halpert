@@ -6,7 +6,7 @@ import { createBodyPartHandler } from "../controller/bodyPart.controller";
 export const bodyPartRoutes = (app: Express) => {
   // create bodyPart
   app.post(
-    "/api/body-parts",
+    "/api/v1/body-parts",
     validateResource(createBodyPartSchema),
     createBodyPartHandler
   );

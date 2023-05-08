@@ -7,7 +7,7 @@ import { createRoleHandler } from "../controller/user.controller";
 export const userRoutes = (app: Express) => {
   // assign role
   app.patch(
-    "/api/users/role",
+    "/api/v1/users/role",
     validateResource(getUserSchema),
     createRoleHandler
   );
