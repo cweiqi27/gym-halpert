@@ -11,6 +11,7 @@ const config: Config = {
     "\\.(css|less|sass|scss)$": "identity-obj-proxy",
   },
   setupFilesAfterEnv: ["<rootDir>jest-setup.ts"],
+  verbose: true,
 };
 
 export default config;
