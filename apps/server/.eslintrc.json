@@ -1,7 +1,6 @@
 {
   "extends": [
     "plugin:@typescript-eslint/recommended",
-    "plugin:n/recommended",
     "plugin:promise/recommended",
     "prettier"
   ],
@@ -9,7 +8,7 @@
   "parserOptions": {
     "project": ["apps/server/tsconfig.json"]
   },
-  "plugin": ["@typescript/eslint", "jest", "promise", "n"],
+  "plugins": ["@typescript-eslint", "jest", "promise"],
   "rules": {
     "@typescript-eslint/consistent-type-imports": "warn"
   }
