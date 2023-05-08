@@ -8,14 +8,14 @@ import { createExerciseHandler } from "../controller/exercise.controller";
 export const exerciseRoutes = (app: Express) => {
   // create bodyPart
   app.post(
-    "/api/body-parts",
+    "/api/body-parts/create",
     validateResource(createBodyPartSchema),
     createBodyPartHandler
   );
 
   // create exercise
   app.post(
-    "/api/exercises",
+    "/api/exercises/create",
     validateResource(createExerciseSchema),
     createExerciseHandler
   );

@@ -8,21 +8,21 @@ import { createGameHandler } from "../controller/game.controller";
 export const workoutRoutes = (app: Express) => {
   // create workout
   app.post(
-    "/api/workouts",
+    "/api/workouts/create",
     validateResource(createWorkoutSchema),
     createWorkoutHandler
   );
 
   // create game
   app.post(
-    "/api/workouts/games",
+    "/api/workouts/games/create",
     validateResource(createGameSchema),
     createGameHandler
   );
 
   //create set
   app.post(
-    "/api/workouts/games/sets",
+    "/api/workouts/games/sets/create",
     validateResource(createGameSchema),
     createGameHandler
   );
