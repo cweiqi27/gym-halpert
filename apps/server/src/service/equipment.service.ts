@@ -10,7 +10,9 @@ export const createEquipment = async (
     const equipment = await Equipment.create(input);
     return equipment;
   } catch (e: any) {
-    throw new Error(e);
+    // if (e instanceof mongoose.Error) throw new Error(e.message);
+    if (e.code === 11000) throw new Error(e.code);
+    throw new Error(e.message);
   }
 };
 
@@ -20,8 +22,8 @@ export const getEquipmentById = async (id: string) => {
     return equipment;
   } catch (e) {
     if (e instanceof mongoose.Error.CastError) {
-      logger.error(e.message);
-      throw new Error("Equipment not found");
+      // logger.error(e.message);
+      throw new Error("404");
     }
     throw new Error("Internal server error");
   }
