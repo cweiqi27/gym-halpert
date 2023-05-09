@@ -3,8 +3,7 @@ import type { Document } from "mongoose";
 
 export interface EquipmentDocument extends Partial<Document> {
   name: string;
-  description?: string;
-  image?: string;
+  description?: string | null;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -12,7 +11,6 @@ export interface EquipmentDocument extends Partial<Document> {
 const equipmentSchema = new Schema<EquipmentDocument>({
   name: { type: String, required: true, unique: true },
   description: String,
-  image: String,
   createdAt: { type: Date, default: Date.now() },
   updatedAt: { type: Date, default: Date.now() },
 });
