@@ -1,7 +1,10 @@
 import type { Express } from "express";
 import validateResource from "../middleware/validateResource";
 import { createBodyPartSchema } from "../schema/bodyPart.schema";
-import { createBodyPartHandler } from "../controller/bodyPart.controller";
+import {
+  createBodyPartHandler,
+  getBodyPartHandler,
+} from "../controller/bodyPart.controller";
 
 export const bodyPartRoutes = (app: Express) => {
   // create bodyPart
@@ -10,4 +13,7 @@ export const bodyPartRoutes = (app: Express) => {
     validateResource(createBodyPartSchema),
     createBodyPartHandler
   );
+
+  // get bodyPart by id
+  app.get("/api/v1/body-parts/:id", getBodyPartHandler);
 };
