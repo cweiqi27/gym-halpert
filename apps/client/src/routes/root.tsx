@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import styles from "./Root.module.scss";
+import styles from "./root.module.scss";
 import Toast from "../features/toast/Toast";
 import Sidebar from "../features/ui/Sidebar";
 import { RedirectToSignIn, SignedIn, SignedOut } from "@clerk/clerk-react";
