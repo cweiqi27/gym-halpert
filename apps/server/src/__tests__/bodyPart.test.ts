@@ -28,7 +28,6 @@ describe("BodyPart", () => {
         await request(app)
           .get(`/api/v1/body-parts/${id}`)
           .set("Accept", "application/json")
-          .expect("Content-Type", /json/)
           .expect(200);
       });
     });

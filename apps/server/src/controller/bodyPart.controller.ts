@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
 import type { CreateBodyPartInput } from "../schema/bodyPart.schema";
-import { createBodyPart } from "../service/bodyPart.service";
+import { createBodyPart, getBodyPartById } from "../service/bodyPart.service";
 import { isNativeError } from "util/types";
 
 export const createBodyPartHandler = async (
@@ -26,7 +26,7 @@ export const createBodyPartHandler = async (
 
 export const getBodyPartHandler = async (req: Request, res: Response) => {
   try {
-    const bodyPart = await createBodyPart(req.body);
+    const bodyPart = await getBodyPartById(req.params["id"]);
     return res.json(bodyPart);
   } catch (e) {
     if (isNativeError(e) && e.message === "404") {

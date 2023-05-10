@@ -14,9 +14,9 @@ export const createBodyPart = (
   }
 };
 
-export const getBodyPartById = (id: string) => {
+export const getBodyPartById = async (id: string) => {
   try {
-    const bodyPart = BodyPart.findById(id);
+    const bodyPart = await BodyPart.findById(id);
     return bodyPart;
   } catch (e) {
     if (e instanceof mongoose.Error.CastError) {
