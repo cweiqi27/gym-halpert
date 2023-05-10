@@ -1,3 +1,4 @@
+// omit a single property in an object
 export function omitSingle<T, K extends keyof T>(
   key: K,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

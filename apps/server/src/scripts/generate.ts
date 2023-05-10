@@ -9,8 +9,8 @@ const name = process.argv[3];
 const nameCapitalised = name.charAt(0).toUpperCase() + name.slice(1);
 
 const controllerSample = `import type { Request, Response } from "express";
-// import { create${nameCapitalised} } from "../service/${name}.service.ts";
-// import {Create${nameCapitalised}Input} from "../schema/${name}.schema.ts";
+// import { create${nameCapitalised} } from "../service/${name}.service";
+// import {Create${nameCapitalised}Input} from "../schema/${name}.schema";
 
 export const create${nameCapitalised}Handler = async (
   req: Request<

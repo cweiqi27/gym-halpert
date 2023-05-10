@@ -5,7 +5,7 @@ import { syncWebhookHandler } from "../controller/clerk.controller";
 export const clerkRoutes = (app: Express) => {
   // verify webhooks and perform actions
   app.post(
-    "/clerk/webhooks",
+    "/api/v1/clerk/webhooks",
     bodyParser.raw({ type: "application/json" }),
     syncWebhookHandler
   );

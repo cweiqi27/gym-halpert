@@ -1,9 +1,11 @@
+import React from "react";
 import styles from "./Button.module.scss";
 
 type ButtonProps = {
   title?: string;
   text?: string;
   color: "primary" | "secondary" | "tertiary";
+  action: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 const Button = ({ title, text, color }: ButtonProps) => {
