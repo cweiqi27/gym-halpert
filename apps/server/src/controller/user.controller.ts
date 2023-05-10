@@ -18,7 +18,7 @@ export const createRoleHandler = async (
       user = await createRole(req.body.userId, "ADMIN");
     else user = await createRole(req.body.userId, "USER");
 
-    return res.json(user.publicMetadata);
+    return res.json(user);
   } catch (e: any) {
     return res.status(400).send(e);
   }

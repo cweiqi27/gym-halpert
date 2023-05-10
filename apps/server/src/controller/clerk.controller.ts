@@ -16,14 +16,13 @@ export const syncWebhookHandler = async (req: Request, res: Response) => {
   let msg;
   try {
     msg = wh.verify(payload, headers) as WebhookMessage;
-    console.log(typeof msg);
   } catch (e) {
     res.status(400).send({ message: "Webhook verification failed" });
   }
 
   if (msg) {
-    const userId = msg.data.id as string;
     if (msg.type === "user.created") {
+      const userId = msg.data.id as string;
       const createdAt = msg.data.created_at as number;
       const updatedAt = msg.data.updated_at as number;
       const user = await createUser(userId, createdAt, updatedAt);

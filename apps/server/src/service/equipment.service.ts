@@ -22,7 +22,6 @@ export const getEquipmentById = async (id: string) => {
     return equipment;
   } catch (e) {
     if (e instanceof mongoose.Error.CastError) {
-      // logger.error(e.message);
       throw new Error("404");
     }
     throw new Error("Internal server error");

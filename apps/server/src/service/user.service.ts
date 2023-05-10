@@ -1,14 +1,13 @@
 import User from "../model/user.model";
-import clerk from "@clerk/clerk-sdk-node";
 
 export const createUser = async (
-  userInput: string,
+  userId: string,
   createdAt: number,
   updatedAt: number
 ) => {
   try {
     const user = await User.create({
-      userId: userInput,
+      externalId: userId,
       createdAt: new Date(createdAt),
       updatedAt: new Date(updatedAt),
     });
@@ -20,9 +19,10 @@ export const createUser = async (
 
 export const createRole = async (userId: string, role: "ADMIN" | "USER") => {
   try {
-    const user = await clerk.users.updateUser(userId, {
-      publicMetadata: { role: role },
-    });
+    const user = User.updateOne(
+      { externalId: userId },
+      { $set: { role: role } }
+    );
     return user;
   } catch (e: any) {
     throw new Error(e);
