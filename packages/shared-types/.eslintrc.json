@@ -1,0 +1,11 @@
+{
+  "extends": ["plugin:@typescript-eslint/recommended", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["packages/shared-types/tsconfig.json"]
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": "warn"
+  }
+}
