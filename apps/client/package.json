@@ -29,6 +29,7 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/testing-library__jest-dom": "^5.14.5",
+    "shared-types": "workspace:*",
     "@vitejs/plugin-react-swc": "^3.0.0",
     "eslint": "^8.0.1",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
