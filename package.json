@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-turbo": "^1.9.4",
     "turbo": "^1.9.3",
     "typescript": "^5.0.4"
   }
