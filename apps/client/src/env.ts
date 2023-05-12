@@ -3,6 +3,7 @@ import z from "zod";
 const schema = z
   .object({
     VITE_CLERK_PUBLISHABLE_KEY: z.string().min(1),
+    VITE_DEV_URL: z.string().min(1),
   })
   .safeParse(import.meta.env);
 
