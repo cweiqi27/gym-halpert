@@ -1,4 +1,4 @@
-import type { ExerciseDocument } from "../model/exercise.model";
+import type { ExerciseDocument } from "shared-types";
 import Exercise from "../model/exercise.model";
 
 export const createExercise = async (

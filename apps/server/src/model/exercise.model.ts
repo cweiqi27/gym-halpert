@@ -1,18 +1,5 @@
 import { Schema, model } from "mongoose";
-import type { Document } from "mongoose";
-import type { BodyPartDocument } from "./bodyPart.model";
-import type { EquipmentDocument } from "./equipment.model";
-
-export interface ExerciseDocument extends Partial<Document> {
-  name: string;
-  description?: string;
-  image?: string;
-  bodyParts: BodyPartDocument["_id"][];
-  equipment?: EquipmentDocument["_id"];
-  difficulty: number;
-  createdAt: Date;
-  updatedAt: Date;
-}
+import type { ExerciseDocument } from "shared-types";
 
 const exerciseSchema = new Schema<ExerciseDocument>({
   name: { type: String, required: true, unique: true },

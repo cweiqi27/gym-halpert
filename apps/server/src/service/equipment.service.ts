@@ -1,7 +1,6 @@
-import type { EquipmentDocument } from "../model/equipment.model";
+import type { EquipmentDocument } from "shared-types";
 import Equipment from "../model/equipment.model";
 import mongoose from "mongoose";
-import logger from "../utils/logger";
 
 export const createEquipment = async (
   input: Omit<EquipmentDocument, "createdAt" | "updatedAt">
@@ -10,7 +9,6 @@ export const createEquipment = async (
     const equipment = await Equipment.create(input);
     return equipment;
   } catch (e: any) {
-    // if (e instanceof mongoose.Error) throw new Error(e.message);
     if (e.code === 11000) throw new Error(e.code);
     throw new Error(e.message);
   }

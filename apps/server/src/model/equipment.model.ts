@@ -1,12 +1,5 @@
 import { Schema, model } from "mongoose";
-import type { Document } from "mongoose";
-
-export interface EquipmentDocument extends Partial<Document> {
-  name: string;
-  description?: string | null;
-  createdAt: Date;
-  updatedAt: Date;
-}
+import type { EquipmentDocument } from "shared-types";
 
 const equipmentSchema = new Schema<EquipmentDocument>({
   name: { type: String, required: true, unique: true },

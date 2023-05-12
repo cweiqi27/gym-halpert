@@ -1,13 +1,5 @@
 import { Schema, model } from "mongoose";
-import type { Document } from "mongoose";
-
-export interface BodyPartDocument extends Partial<Document> {
-  name: string;
-  description?: string | null;
-  image?: string | null;
-  createdAt: Date;
-  updatedAt: Date;
-}
+import type { BodyPartDocument } from "shared-types";
 
 const bodyPartSchema = new Schema<BodyPartDocument>({
   name: { type: String, required: true, unique: true },

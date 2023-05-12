@@ -1,13 +1,6 @@
 import { Schema, model } from "mongoose";
-import type { Document } from "mongoose";
-import type { SetType } from "../types/typeEnums.types";
-import { SetTypeArr } from "../types/typeEnums.types";
-
-export interface SetDocument extends Partial<Document> {
-  type: SetType;
-  weight?: number;
-  reps?: number;
-}
+import { SetTypeArr } from "shared-types";
+import type { SetDocument } from "shared-types";
 
 export const setSchema = new Schema<SetDocument>({
   type: {

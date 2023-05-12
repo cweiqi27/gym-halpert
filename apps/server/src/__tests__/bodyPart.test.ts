@@ -2,7 +2,7 @@ import request from "supertest";
 import { createServer } from "../utils/server.utils";
 import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from "mongoose";
-import type { BodyPartDocument } from "../model/bodyPart.model";
+import type { BodyPartDocument } from "shared-types";
 
 const app = createServer();
 

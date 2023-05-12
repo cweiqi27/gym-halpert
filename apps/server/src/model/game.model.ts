@@ -1,20 +1,8 @@
 import { Schema, model } from "mongoose";
-import type { Document } from "mongoose";
-import type { ExerciseDocument } from "./exercise.model";
-import type { WorkoutDocument } from "./workout.model";
-import type { SetDocument } from "./set.model";
+import type * as sharedTypes from "shared-types";
 import { setSchema } from "./set.model";
 
-export interface GameDocument extends Partial<Document> {
-  exercise: ExerciseDocument["_id"];
-  sets: SetDocument[];
-  duration?: number;
-  workout: WorkoutDocument["_id"];
-  createdAt: Date;
-  updatedAt: Date;
-}
-
-const gameSchema = new Schema<GameDocument>({
+const gameSchema = new Schema<sharedTypes.GameDocument>({
   exercise: { type: Schema.Types.ObjectId, ref: "Exercise", required: true },
   sets: [setSchema],
   duration: Number,
@@ -23,6 +11,6 @@ const gameSchema = new Schema<GameDocument>({
   updatedAt: { type: Date, default: Date.now() },
 });
 
-const Game = model<GameDocument>("Game", gameSchema);
+const Game = model<sharedTypes.GameDocument>("Game", gameSchema);
 
 export default Game;

@@ -1,19 +1,6 @@
 import { Schema, model } from "mongoose";
-import type { Document } from "mongoose";
-import type { UserDocument } from "./user.model";
-import type { GameDocument } from "./game.model";
-import type { WorkoutType } from "../types/typeEnums.types";
-import { WorkoutTypeArr } from "../types/typeEnums.types";
-
-export interface WorkoutDocument extends Partial<Document> {
-  games?: GameDocument["_id"][];
-  type: WorkoutType;
-  duration?: number;
-  notes?: string;
-  user: UserDocument["_id"];
-  createdAt: Date;
-  updatedAt: Date;
-}
+import type { WorkoutDocument } from "shared-types";
+import { WorkoutTypeArr } from "shared-types";
 
 const workoutSchema = new Schema<WorkoutDocument>({
   games: [{ type: Schema.Types.ObjectId, ref: "Game" }],

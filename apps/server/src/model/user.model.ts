@@ -1,13 +1,6 @@
-import type { Document } from "mongoose";
 import { Schema, model } from "mongoose";
-import { UserRole, UserRoleArr } from "../types/typeEnums.types";
-
-export interface UserDocument extends Partial<Document> {
-  externalId: string;
-  role?: UserRole;
-  createdAt: Date;
-  updatedAt: Date;
-}
+import type { UserDocument } from "shared-types";
+import { UserRoleArr } from "shared-types";
 
 const userSchema = new Schema<UserDocument>({
   externalId: { type: String, unique: true, required: true },

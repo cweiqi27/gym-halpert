@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import type { BodyPartDocument } from "../model/bodyPart.model";
+import type { BodyPartDocument } from "shared-types";
 import BodyPart from "../model/bodyPart.model";
 
 export const createBodyPart = (
