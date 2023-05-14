@@ -1,4 +1,4 @@
-import type { WorkoutDocument } from "../model/workout.model";
+import type { WorkoutDocument } from "shared-types";
 import Workout from "../model/workout.model";
 
 export const createWorkout = async (

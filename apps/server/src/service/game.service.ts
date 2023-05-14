@@ -1,4 +1,4 @@
-import type { GameDocument } from "../model/game.model";
+import type { GameDocument } from "shared-types";
 import Game from "../model/game.model";
 import Workout from "../model/workout.model";
 import logger from "../utils/logger";

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { SetTypeArr } from "../types/typeEnums.types";
+import { SetTypeArr } from "shared-types";
 
 export const createSetSchema = z.object({
   body: z.object({

@@ -1,6 +1,10 @@
 import type { Request, Response } from "express";
 import type { CreateBodyPartInput } from "../schema/bodyPart.schema";
-import { createBodyPart, getBodyPartById } from "../service/bodyPart.service";
+import {
+  createBodyPart,
+  deleteBodyPart,
+  getBodyPartById,
+} from "../service/bodyPart.service";
 import { isNativeError } from "util/types";
 
 export const createBodyPartHandler = async (
@@ -24,7 +28,7 @@ export const createBodyPartHandler = async (
   }
 };
 
-export const getBodyPartHandler = async (req: Request, res: Response) => {
+export const getBodyPartByIdHandler = async (req: Request, res: Response) => {
   try {
     const bodyPart = await getBodyPartById(req.params["id"]);
     return res.json(bodyPart);
@@ -34,4 +38,11 @@ export const getBodyPartHandler = async (req: Request, res: Response) => {
     }
     return res.status(500).send("Internal server error");
   }
+};
+
+export const deleteBodyPartHandler = async (req: Request, res: Response) => {
+  try {
+    const bodyPart = await deleteBodyPart(req.params["id"]);
+    return res.status(204).json(bodyPart);
+  } catch (e) {}
 };

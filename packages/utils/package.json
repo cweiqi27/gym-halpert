@@ -8,7 +8,7 @@
     "lint": "eslint . --ext .ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Chan Wei Qi",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.1",

@@ -1,5 +1,4 @@
-
-import type { SetDocument } from "../model/set.model";
+import type { SetDocument } from "shared-types";
 import Set from "../model/set.model";
 
 export const createSet = (

@@ -15,8 +15,7 @@ export const createEquipment = async (
 };
 
 export const getEquipmentById = async (id: string) => {
-  try {
-    const equipment = await Equipment.findById(id);
+  try { const equipment = await Equipment.findById(id);
     return equipment;
   } catch (e) {
     if (e instanceof mongoose.Error.CastError) {

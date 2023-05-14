@@ -1,7 +1,10 @@
 import type { Express } from "express";
 import validateResource from "../middleware/validateResource";
 import { createExerciseSchema } from "../schema/exercise.schema";
-import { createExerciseHandler } from "../controller/exercise.controller";
+import {
+  createExerciseHandler,
+  getExerciseHandler,
+} from "../controller/exercise.controller";
 
 export const exerciseRoutes = (app: Express) => {
   // create exercise
@@ -10,4 +13,7 @@ export const exerciseRoutes = (app: Express) => {
     validateResource(createExerciseSchema),
     createExerciseHandler
   );
+
+  // get exercise by id
+  app.get("/api/v1/exercises/:id", getExerciseHandler);
 };

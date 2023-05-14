@@ -1,5 +1,5 @@
 import z from "zod";
-import { WorkoutTypeArr } from "../types/typeEnums.types";
+import { WorkoutTypeArr } from "shared-types";
 
 export const createWorkoutSchema = z.object({
   body: z.object({

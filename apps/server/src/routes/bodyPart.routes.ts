@@ -3,7 +3,8 @@ import validateResource from "../middleware/validateResource";
 import { createBodyPartSchema } from "../schema/bodyPart.schema";
 import {
   createBodyPartHandler,
-  getBodyPartHandler,
+  deleteBodyPartHandler,
+  getBodyPartByIdHandler,
 } from "../controller/bodyPart.controller";
 
 export const bodyPartRoutes = (app: Express) => {
@@ -15,5 +16,8 @@ export const bodyPartRoutes = (app: Express) => {
   );
 
   // get bodyPart by id
-  app.get("/api/v1/body-parts/:id", getBodyPartHandler);
+  app.get("/api/v1/body-parts/:id", getBodyPartByIdHandler);
+
+  // delete bodyPart by id
+  app.delete("/api/v1/body-parts/:id", deleteBodyPartHandler);
 };
