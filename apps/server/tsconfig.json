@@ -8,5 +8,10 @@
     "sourceMap": true,
     "esModuleInterop": true
   },
-  "include": ["src", "jest.config.ts", "jest-setup.ts"]
+  "include": [
+    "src",
+    "jest.config.ts",
+    "jest-setup.ts"
+  ],
+  "extends": "./tsconfig.paths.json"
 }
