@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
 import { Webhook } from "svix";
-import { env } from "../schema/env.schema";
-import { createUser } from "../service/user.service";
+import { env } from "@/schema/env.schema";
+import { createUser } from "@/service/user.service";
 import type {
   IncomingCustomHeaders,
   WebhookMessage,

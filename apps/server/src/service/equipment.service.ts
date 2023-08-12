@@ -1,7 +1,7 @@
-import type { EquipmentDocument } from "../model/equipment.model";
-import Equipment from "../model/equipment.model";
+import type { EquipmentDocument } from "@/model/equipment.model";
+import Equipment from "@/model/equipment.model";
 import mongoose from "mongoose";
-import logger from "../utils/logger";
+import logger from "@/utils/logger";
 
 export const createEquipment = async (
   input: Omit<EquipmentDocument, "createdAt" | "updatedAt">

@@ -1,6 +1,6 @@
 import type { Express } from "express";
-import validateResource from "../middleware/validateResource";
-import { createEquipmentSchema } from "../schema/equipment.schema";
+import validateResource from "@/middleware/validateResource";
+import { createEquipmentSchema } from "@/schema/equipment.schema";
 import {
   createEquipmentHandler,
   getEquipmentByIdHandler,

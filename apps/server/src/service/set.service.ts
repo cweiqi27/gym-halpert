@@ -1,6 +1,5 @@
-
-import type { SetDocument } from "../model/set.model";
-import Set from "../model/set.model";
+import type { SetDocument } from "@/model/set.model";
+import Set from "@/model/set.model";
 
 export const createSet = (
   input: Omit<SetDocument, "createdAt" | "updatedAt">

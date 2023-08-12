@@ -1,7 +1,7 @@
 import express from "express";
-import routes from "../routes/app.routes";
+import routes from "@/routes/app.routes";
 
-// these are extracted for testing
+// Extracted for testing
 export const createServer = () => {
   const app = express();
 

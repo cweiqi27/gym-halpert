@@ -1,7 +1,7 @@
-import type { GameDocument } from "../model/game.model";
-import Game from "../model/game.model";
-import Workout from "../model/workout.model";
-import logger from "../utils/logger";
+import type { GameDocument } from "@/model/game.model";
+import Game from "@/model/game.model";
+import Workout from "@/model/workout.model";
+import logger from "@/utils/logger";
 
 export const createGame = async (
   input: Omit<GameDocument, "createdAt" | "updatedAt">

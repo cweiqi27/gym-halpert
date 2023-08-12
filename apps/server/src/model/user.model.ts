@@ -1,6 +1,6 @@
 import type { Document } from "mongoose";
 import { Schema, model } from "mongoose";
-import { UserRole, UserRoleArr } from "../types/typeEnums.types";
+import { UserRole, UserRoleArr } from "@/types/typeEnums.types";
 
 export interface UserDocument extends Partial<Document> {
   externalId: string;

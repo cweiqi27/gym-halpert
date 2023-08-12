@@ -1,6 +1,6 @@
 import type { Express } from "express";
-import validateResource from "../middleware/validateResource";
-import { createBodyPartSchema } from "../schema/bodyPart.schema";
+import validateResource from "@/middleware/validateResource";
+import { createBodyPartSchema } from "@/schema/bodyPart.schema";
 import {
   createBodyPartHandler,
   getBodyPartHandler,

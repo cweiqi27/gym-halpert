@@ -1,9 +1,6 @@
 import type { Request, Response } from "express";
-import {
-  createEquipment,
-  getEquipmentById,
-} from "../service/equipment.service";
-import type { CreateEquipmentInput } from "../schema/equipment.schema";
+import { createEquipment, getEquipmentById } from "@/service/equipment.service";
+import type { CreateEquipmentInput } from "@/schema/equipment.schema";
 import { isNativeError } from "util/types";
 
 export const createEquipmentHandler = async (

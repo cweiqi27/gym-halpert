@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
-import type { CreateBodyPartInput } from "../schema/bodyPart.schema";
-import { createBodyPart, getBodyPartById } from "../service/bodyPart.service";
+import type { CreateBodyPartInput } from "@/schema/bodyPart.schema";
+import { createBodyPart, getBodyPartById } from "@/service/bodyPart.service";
 import { isNativeError } from "util/types";
 
 export const createBodyPartHandler = async (

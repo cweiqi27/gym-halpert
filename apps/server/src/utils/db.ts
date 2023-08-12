@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { env } from "../schema/env.schema";
+import { env } from "@/schema/env.schema";
 import logger from "./logger";
 
 export const connect = async () => {
@@ -11,8 +11,8 @@ export const connect = async () => {
       logger.info("[database]: Database connected successfully.");
       return;
     })
-    .catch((e) => {
-      console.error("[database]: Error connecting to database. \n" + e);
+    .catch((err: unknown) => {
+      console.error("[database]: Error connecting to database. \n" + err);
       process.exit(1);
     });
 };

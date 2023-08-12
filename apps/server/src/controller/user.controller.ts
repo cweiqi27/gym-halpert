@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
-import { createRole } from "../service/user.service";
-import { GetUserInput } from "../schema/user.schema";
-import { env } from "../schema/env.schema";
+import { createRole } from "@/service/user.service";
+import { GetUserInput } from "@/schema/user.schema";
+import { env } from "@/schema/env.schema";
 
 export const createRoleHandler = async (
   req: Request<

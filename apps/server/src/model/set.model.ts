@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 import type { Document } from "mongoose";
-import type { SetType } from "../types/typeEnums.types";
-import { SetTypeArr } from "../types/typeEnums.types";
+import type { SetType } from "@/types/typeEnums.types";
+import { SetTypeArr } from "@/types/typeEnums.types";
 
 export interface SetDocument extends Partial<Document> {
   type: SetType;

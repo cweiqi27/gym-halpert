@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
-import logger from "../utils/logger";
-import { createSet } from "../service/set.service";
-import type { CreateSetInput } from "../schema/set.schema";
+import logger from "@/utils/logger";
+import { createSet } from "@/service/set.service";
+import type { CreateSetInput } from "@/schema/set.schema";
 
 export const createSetHandler = async (
   req: Request<

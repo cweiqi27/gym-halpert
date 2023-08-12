@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
-import logger from "../utils/logger";
-import type { CreateWorkoutInput } from "../schema/workout.schema";
-import { createWorkout } from "../service/workout.service";
+import logger from "@/utils/logger";
+import type { CreateWorkoutInput } from "@/schema/workout.schema";
+import { createWorkout } from "@/service/workout.service";
 
 export const createWorkoutHandler = async (
   req: Request<

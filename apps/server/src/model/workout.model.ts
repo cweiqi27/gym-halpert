@@ -2,8 +2,8 @@ import { Schema, model } from "mongoose";
 import type { Document } from "mongoose";
 import type { UserDocument } from "./user.model";
 import type { GameDocument } from "./game.model";
-import type { WorkoutType } from "../types/typeEnums.types";
-import { WorkoutTypeArr } from "../types/typeEnums.types";
+import type { WorkoutType } from "@/types/typeEnums.types";
+import { WorkoutTypeArr } from "@/types/typeEnums.types";
 
 export interface WorkoutDocument extends Partial<Document> {
   games?: GameDocument["_id"][];

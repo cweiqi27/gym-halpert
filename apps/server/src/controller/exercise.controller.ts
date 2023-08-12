@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
-import { createExercise } from "../service/exercise.service";
-import type { CreateExerciseInput } from "../schema/exercise.schema";
+import { createExercise } from "@/service/exercise.service";
+import type { CreateExerciseInput } from "@/schema/exercise.schema";
 
 export const createExerciseHandler = (
   req: Request<

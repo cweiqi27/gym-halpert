@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
-import { createGame } from "../service/game.service";
-import type { CreateGameInput } from "../schema/game.schema";
+import { createGame } from "@/service/game.service";
+import type { CreateGameInput } from "@/schema/game.schema";
 
 export const createGameHandler = async (
   req: Request<
